@@ -25,7 +25,7 @@ export default function NewsBoard({ category }) {
         });
     }
     apiCall();
-  }, [category]);
+  }, []);
 
   return (
     <>
