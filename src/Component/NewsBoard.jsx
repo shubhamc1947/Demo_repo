@@ -34,9 +34,9 @@ export default function NewsBoard({ category }) {
       </h1>
       {
         loading?(
-            <div class="spinner-wrap">
-                <div class="spinner-border text-warning" role="status">
-                    <span class="visually-hidden">Loading...</span>
+            <div className="spinner-wrap">
+                <div className="spinner-border text-warning" role="status">
+                    <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
         ):(
