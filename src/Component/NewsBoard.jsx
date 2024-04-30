@@ -16,7 +16,7 @@ export default function NewsBoard({ category }) {
         .then((resp) => {
           resp.json().then((result) => {
             setCurrNews(result.articles);
-            
+            setLoading(false); 
           });
         })
         .catch((error) => {
@@ -25,7 +25,7 @@ export default function NewsBoard({ category }) {
         });
     }
     apiCall();
-  }, []);
+  }, [category]);
 
   return (
     <>
@@ -33,29 +33,30 @@ export default function NewsBoard({ category }) {
       <h1 className="text-center mt-4">
         <span className="badge bg-dark text-warning">Latest</span> News
       </h1>
-      {loading ? (
+      {
+        loading?(
             <div className="spinner-wrap">
                 <div className="spinner-border text-warning" role="status">
                     <span className="visually-hidden">Loading...</span>
                 </div>
             </div>
-        ) : (
+        ):(
             <div className="container-md">
                 <div className="row justify-content-center gap-2 mt-4 ">
-                    {currNews.length > 0 ? (
-                        currNews.map((news, i) => {
-                            if (news.urlToImage) {
-                                // return <NewsWrap key={i} news={news} />;
-                                return <DemoWrap key={i} />;
-                            }
-                            return null;
-                        })
-                    ) : (
-                        <p>No news available for this category.</p>
-                    )}
+                {
+                  currNews.length>0?
+                    (currNews.map((news, i) => {
+                      if (news.urlToImage) {
+                      return <NewsWrap key={i} news={news} />;
+                      // return <DemoWrap key={i}/>
+                      }
+                      return null;
+                  })):("")
+                }
                 </div>
             </div>
-        )}
+        )
+      }
       
     </>
   );
