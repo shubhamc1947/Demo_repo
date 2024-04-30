@@ -1,0 +1,35 @@
+
+.nav-link{
+  cursor: pointer;
+}
+
+.card{
+  width: 300px;
+  /* width: 250px; */
+  /* min-width: 290px; */
+}
+.spinner-wrap{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.spinner-border{
+
+  width: 5rem;
+  height: 5rem;
+}
+
+.card-img-top{
+  margin-top:0.5rem;
+  width:100%;
+  object-fit: cover;
+  height: 200px;
+}
+@media only screen and (max-width: 600px) {
+  .card{
+    width: 400px;
+  }
+}
