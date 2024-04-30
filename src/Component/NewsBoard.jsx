@@ -1,6 +1,7 @@
 import NewsWrap from "./NewsWrap";
 import { getYesterdayDate } from "../UtilityFun/UsefulFun";
 import { useEffect, useState } from "react";
+import DemoWrap from "./DemoWrap";
 export default function NewsBoard({ category }) {
   const [currNews, setCurrNews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,7 +45,8 @@ export default function NewsBoard({ category }) {
                 <div className="row justify-content-center gap-2 mt-4 ">
                 {currNews.map((news, i) => {
                     if (news.urlToImage) {
-                    return <NewsWrap key={i} news={news} />;
+                    // return <NewsWrap key={i} news={news} />;
+                    return <DemoWrap key={i}/>
                     }
                     return null;
                 })}
