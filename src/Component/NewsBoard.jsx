@@ -10,7 +10,7 @@ export default function NewsBoard({ category }) {
     function apiCall() {
       const API_KEY = "9fa739e73718460eb1238ba780d5e8b3";
       const url = `https://newsapi.org/v2/everything?q=${category}&from=${formattedDate}&to=${formattedDate}&sortBy=popularity&apiKey=${API_KEY}`;
-      // console.log(url)
+      console.log(url)
       fetch(url)
         .then((resp) => {
           resp.json().then((result) => {
