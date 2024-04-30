@@ -23,7 +23,7 @@ export default function NewsBoard({ category }) {
           setLoading(false); // Set loading to false in case of error
         });
     }
-    // apiCall();
+    apiCall();
   }, [category]);
 
   return (
