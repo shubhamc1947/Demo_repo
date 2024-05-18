@@ -9,7 +9,7 @@ export default function NewsBoard({ category }) {
 //   api.org/v2/top-headlines?country=us&apiKey=9fa739e73718460eb1238ba780d5e8b3
   useEffect(() => {
     function apiCall() {
-      const API_KEY = "9fa739e73718460eb1238ba780d5e8b3";
+      const API_KEY = "44a6a8d69a5441ce9936c8dcaea6a6ba";
       const url = `https://newsapi.org/v2/everything?q=${category}&from=${formattedDate}&to=${formattedDate}&sortBy=popularity&apiKey=${API_KEY}`;
       console.log(url)
       fetch(url)
