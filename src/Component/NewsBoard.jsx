@@ -44,14 +44,13 @@ export default function NewsBoard({ category }) {
             <div className="container-md">
                 <div className="row justify-content-center gap-2 mt-4 ">
                 {
-                  currNews.length>0?
-                    (currNews.map((news, i) => {
+                 currNews &&  currNews.map((news, i) => {
                       if (news.urlToImage) {
                       return <NewsWrap key={i} news={news} />;
                       // return <DemoWrap key={i}/>
                       }
                       return null;
-                  })):("")
+                  })
                 }
                 </div>
             </div>
